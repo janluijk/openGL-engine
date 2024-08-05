@@ -1,5 +1,7 @@
-engine: main.cpp
-	g++ -O3 -o engine main.cpp
+LDFLAGS = -lglfw -lOpenGL
+
+engine: *.cpp *.hpp
+	g++ -O3 -o engine *.cpp $(LDFLAGS)
 
 .PHONY: test clean
 
